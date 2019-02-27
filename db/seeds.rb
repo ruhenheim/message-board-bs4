@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Faker::Config.locale = :ja
+
+100.times {
+  Message.create(
+    title: Faker::Lorem.word,
+    content: Faker::Lorem.sentence
+  )
+}
